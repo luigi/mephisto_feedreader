@@ -12,7 +12,7 @@ module Mephisto::Plugins
           t.column :href, :string
           t.column :title, :string
           t.column :link, :string
-          t.column :feed_data, :text
+          t.column :feed_data, :text, :limit => 64.kilobytes + 1
           t.column :feed_data_type, :string
           t.column :http_headers, :text
           t.column :last_retrieved, :datetime
